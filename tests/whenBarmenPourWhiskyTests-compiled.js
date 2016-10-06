@@ -33,3 +33,11 @@ suite('when barmen pour whisky', function () {
         });
     });
 });
+
+// * When<Action>.<Arrange><Assert>
+// * <Arrange>.<Assert>
+// * <Assert>.<Arrange>
+// * <ClassName>Should.<Act><Assert>
+// * <ClassNameTests>.<Act>_<Arrange>_<Assert>
+
+//# sourceMappingURL=whenBarmenPourWhiskyTests-compiled.js.map
