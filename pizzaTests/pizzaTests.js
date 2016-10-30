@@ -1,3 +1,5 @@
+import assert from 'assert';
+
 function getPrice() {
     //
 }
@@ -31,22 +33,22 @@ suite('clientBuyPizzaFromSite', function () {
 
         let price = getPrice();
 
-        test("correctCode", function () {
+        test("whenCorrectCodeThenMakeDiscount", function () {
             assert.equal(price - 100, "totalPrice");
         });
 
-        test("incorrectCode", function () {
+        test("whenIncorrectCodeThenUseCommonPrice", function () {
             assert.equal(price, "totalPrice");
         });
     });
 
     suite("inOrderTwoPizza", function () {
 
-        test("currentTimeFromTenToSixteen", function () {
+        test("currentTimeFromTenToSixteen_MakeTwentyPercentDiscount", function () {
             assert.equal(price * 0.8, "totalPrice");
         });
 
-        test("currentTimeLaterSixteen", function () {
+        test("currentTimeLaterSixteen_useCommonPrice", function () {
             assert.equal(price, "totalPrice");
         });
 
@@ -55,11 +57,11 @@ suite('clientBuyPizzaFromSite', function () {
     suite("inOrderFourPizza", function () {
 
         // clientBuyPizzaFromSite_inOrderFourPizza_currentTimeFromTenToSixteen
-        test("currentTimeFromTenToSixteen", function () {
+        test("currentTimeFromTenToSixteen_useCommonPrice", function () {
             assert.equal(price, "totalPrice");
         });
 
-        test("currentTimeLaterSixteen", function () {
+        test("currentTimeLaterSixteen_useCommonPrice", function () {
             assert.equal(price, "totalPrice");
         });
 
